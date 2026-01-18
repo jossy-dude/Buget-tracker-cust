@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CashFlow AI</title>
+    
+    <!-- Import Map for React and Recharts -->
+    <!-- CRITICAL FIX: Removed React 19 references to prevent Version Conflict Error #31 -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "recharts": "https://esm.sh/recharts@2.12.7?deps=react@18.2.0,react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#19e6a2", 
+              "primary-blue": "#3b82f6",
+              "background-light": "#f6f8f7",
+              "background-dark": "#0f1115",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a1c1e",
+              "cbe-purple": "#634392",
+              "tele-cyan": "#00adef",
+              "boa-blue": "#005baa",
+              "boa-red": "#ed1c24",
+              "dashen-blue": "#2b3990",
+              "dashen-yellow": "#fff200",
+              "bunna-coffee": "#4b2c20",
+              "bunna-yellow": "#fdb913",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"],
+              "sans": ["Manrope", "sans-serif"],
+            },
+            boxShadow: {
+              'elevation-1': '0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3)',
+              'elevation-2': '0px 4px 12px 2px rgba(0, 0, 0, 0.12), 0px 2px 4px 0px rgba(0, 0, 0, 0.2)',
+              'tactile': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0f1115;
+        color: #ffffff;
+        min-height: 100dvh;
+        font-family: 'Manrope', sans-serif;
+      }
+      .mesh-gradient {
+          background-color: hsla(222, 47%, 11%, 1);
+          background-image:
+              radial-gradient(at 0% 0%, hsla(217, 33%, 17%, 1) 0px, transparent 50%),
+              radial-gradient(at 98% 1%, hsla(261, 35%, 19%, 1) 0px, transparent 50%),
+              radial-gradient(at 100% 100%, hsla(214, 39%, 18%, 1) 0px, transparent 50%),
+              radial-gradient(at 0% 100%, hsla(258, 31%, 20%, 1) 0px, transparent 50%);
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      /* Material Symbols Adjustment */
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .material-symbols-outlined.filled {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>

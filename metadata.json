@@ -1,0 +1,5 @@
+{
+  "name": "CashFlow AI",
+  "description": "A modern, tactile budget tracker inspired by Cashu aesthetics. Features an intelligent transaction parser for Ethiopian banks, glassmorphism UI, and advanced analytics.",
+  "requestFramePermissions": []
+}
